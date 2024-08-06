@@ -1,3 +1,10 @@
+# Директории и файлы Gradle
+.gradle/
+build/
+gradle/
+gradlew
+gradlew.bat
+
 # Исключаем каталоги сборки
 /target/
 */out/
