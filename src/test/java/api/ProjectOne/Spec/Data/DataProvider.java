@@ -1,6 +1,4 @@
-package api.Data;
-
-import api.Data.SuccesReg;
+package api.ProjectOne.Spec.Data;
 
 public class DataProvider {
 

@@ -1,4 +1,4 @@
-package api.Data;
+package api.ProjectOne.Spec.Data;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

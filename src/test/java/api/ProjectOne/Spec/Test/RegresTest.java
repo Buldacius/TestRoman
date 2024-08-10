@@ -1,16 +1,14 @@
-package api.Test;
+package api.ProjectOne.Spec.Test;
 
-import api.Data.CalorsData;
-import api.Data.SuccesReg;
-import api.Data.UserData;
-import api.Data.UserNew;
-import api.Data.UserNewResponse;
-import api.Data.ErrorReg;
-import api.Data.Register;
-import api.Spec.Specification;
-import com.fasterxml.jackson.annotation.JsonIgnoreType;
+import api.ProjectOne.Spec.Data.CalorsData;
+import api.ProjectOne.Spec.Data.SuccesReg;
+import api.ProjectOne.Spec.Data.UserData;
+import api.ProjectOne.Spec.Data.UserNew;
+import api.ProjectOne.Spec.Data.UserNewResponse;
+import api.ProjectOne.Spec.Data.ErrorReg;
+import api.ProjectOne.Spec.Data.Register;
+import api.ProjectOne.Spec.Specification;
 import io.restassured.http.ContentType;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.Clock;
@@ -35,17 +33,23 @@ public class RegresTest {
         List<UserData> users = given()
                 .when()
                 .get("/api/users?page=2")
+
                 .then().log().all()
                 .extract().body().jsonPath().getList("data",UserData.class);
         users.forEach(x -> assertTrue(x.getAvatar().contains(x.getId().toString())));
         assertTrue(users.stream().allMatch(x->x.getEmail().endsWith("@reqres.in")));
         List<String> avatars = users.stream().map(UserData :: getAvatar).collect(Collectors.toList());
         List<String> ids = users.stream().map(x -> x.getId().toString()).collect(Collectors.toList());
+        System.out.println("sdfsdf");
+        System.out.println(avatars);
+        System.out.println("sdfsdf");
         for (int i = 0; i< avatars.size(); i++){
            assertTrue(avatars.get(i).contains(ids.get(i)));
             System.out.println(avatars.get(i));
             System.out.println(ids.get(i));
         }
+
+
     }
 
     @Test

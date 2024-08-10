@@ -1,4 +1,4 @@
-package api.Data;
+package api.ProjectOne.Spec.Data;
 
 public class UserData {
         private Integer id;

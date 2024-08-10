@@ -1,4 +1,4 @@
-package api.Data;
+package api.ProjectOne.Spec.Data;
 
 public class CalorsData {
     private Integer id;

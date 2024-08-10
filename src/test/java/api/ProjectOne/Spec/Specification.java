@@ -1,4 +1,4 @@
-package api.Spec;
+package api.ProjectOne.Spec;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;

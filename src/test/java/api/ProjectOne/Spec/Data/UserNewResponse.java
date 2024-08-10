@@ -1,6 +1,4 @@
-package api.Data;
-
-import api.Data.UserNew;
+package api.ProjectOne.Spec.Data;
 
 public class UserNewResponse extends UserNew {
     private String updatedAt;
